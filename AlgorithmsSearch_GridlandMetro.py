@@ -1,26 +1,24 @@
+from collections import Counter
+from sys import stdin
 
-## AlgorithmsSearch_GridlandMetro
+class railTrack:
+    def __init__(self,c1,c2):
+        self.c1=c1
+        self.c2=c2
 
-import collections
-print collections.Counter(['a', 'b', 'c', 'a', 'b', 'b'])
+def countCells(r,c1,c2):
+    
 
-import reduce
-lst = range(5)
-reduce(lambda x,y : x*y, lst) 
-reduce
+def main():
+    lines = list()
+    tracksHash = {}
+    for line in stdin:
+        lines.append(line.strip())
+    r,c,k = lines[0].split(' ')
+    print(r,c,k)
+    for i in range(1, k):
+        trR,c1,c2 = lines[i].split()
+        tracksHash[trR] 
 
-import functools
-functools.reduce(lambda x,y : x*y, lst) 
-
-
-"aa bb cc 111".rsplit(None,1)[1]
-
-functools.reduce(lambda x,y : [y] + x , range(5),[]) 
-
-import re
-pat = re.compile(r"(?P<c>(P<a>[A-Z][A-Za-z]*)\s* (P<b>[A-Z][A-Za-z]*) )")
-x = pat.match("Oliver Twist by Charles Dickens")
-x.group('b')
-
-range(0,5)
-xrange(0,5)
+if __name__ == '__main__':
+	main()

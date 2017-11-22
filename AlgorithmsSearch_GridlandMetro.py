@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-@author: anandrathi
-"""
-
-from collections import Counter
 from sys import stdin
 
 class railTrack:
@@ -20,9 +14,15 @@ def main():
     for line in stdin:
         lines.append(line.strip())
     r,c,k = lines[0].split(' ')
+    r = int(r)
+    c = int(c)
+    k = int(k)
     #print(r,c,k)
     for i in range(1, k):
         trR,c1,c2 = lines[i].split()
+        trR = int(trR)
+        c1 = int(c1)
+        c2 = int(c2)
         node = tracksHash.get(trR)
         if node == None:
             tracksHash[trR] = railTrack(c1,c2)
@@ -36,4 +36,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-    
